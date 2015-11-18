@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151114223224) do
+ActiveRecord::Schema.define(version: 20151118203751) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "chefname"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20151114223224) do
     t.integer  "chef_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture"
   end
 
 end

@@ -11,6 +11,9 @@ gem 'turbolinks'
 gem 'jade'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'rmagick', '~> 2.15', '>= 2.15.4'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
