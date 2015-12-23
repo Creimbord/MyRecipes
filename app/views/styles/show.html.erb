@@ -1,4 +1,4 @@
-<%= render 'shared/page_title', title: "All Recipes" %>
+<%= render 'shared/page_title', title: "Recipes for: #{@style.name} food" %>
 
 <ul class="nav nav-tabs">
   <li class="active">
@@ -9,9 +9,9 @@
   </li>
 </ul>
 
-<%= will_paginate %>
+<%= will_paginate @recipes %>
 
-<% @recipes.each do |recipe| %>
+<% @style.recipes.each do |recipe| %>
   <div class="row">
 
     <div class="col-md-2">
@@ -50,7 +50,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <%= link_to image_tag(recipe.picture.url, size: "250x150", class: "gravatar"), recipe_path(recipe) if
+      <%= image_tag(recipe.picture.url, size: "250x150", class: "gravatar") if
       recipe.picture? %>
     </div>
 
@@ -58,4 +58,4 @@
   <hr/>
 <% end %>
 
-<%= will_paginate %>
+<%= will_paginate @recipes %>
